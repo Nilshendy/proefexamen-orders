@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orderbeheer | Verkoopdashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Orderbeheer Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <!-- Orders Overzicht -->
+    <section class="card" id="orders-section">
+      <div class="section-header">
+        <h2>Lopende Orders</h2>
+        <button id="newOrderBtn" class="btn btn-primary">+ Nieuwe Order</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="orderTable">
+          <thead>
+            <tr>
+              <th>Ordernr</th>
+              <th>Klant</th>
+              <th>Datum</th>
+              <th>Status</th>
+              <th>Acties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamisch gevuld via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Order Formulier -->
+    <section class="card hidden" id="order-form-section">
+      <h2>Nieuwe / Wijzig Order</h2>
+      <form id="orderForm">
+        <div class="form-group">
+          <label for="customerName">Klantnaam</label>
+          <input type="text" id="customerName" name="customerName" required placeholder="Bijv. Jan Jansen" />
+        </div>
+
+        <div class="form-group">
+          <label for="orderDate">Datum</label>
+          <input type="date" id="orderDate" name="orderDate" required />
+        </div>
+
+        <h3>Attracties op datum</h3>
+        <div id="attractionsList" class="attractions-grid">
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="saveOrder" class="btn btn-primary"> Opslaan</button>
+          <button type="button" id="cancelOrder" class="btn btn-secondary">Annuleren</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Verkoopdashboard - Orderbeheer</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
